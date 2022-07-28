@@ -147,7 +147,7 @@
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg-new2.JPG") top center;
+    background: url("/img/hero-bg-new2.JPG") top center;
     background-size: cover;
 }
 #hero:before {
@@ -374,3 +374,52 @@ ul {
 # Portfolio
 --------------------------------------------------------------*/
 
+.button {
+    font-size: 24px;
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Raleway", sans-serif;
+}
+.button {
+    color: #173b6c;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+
+.button:hover {
+    color: #149ddd;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #149ddd;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+.back-to-top:hover {
+  background: #2eafec;
+  color: #fff;
+}
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
