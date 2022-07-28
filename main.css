@@ -1,0 +1,613 @@
+---------------------------------------------------------*/
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 0 15px;
+    background: #040b14;
+    overflow-y: auto;
+}
+#header .profile img {
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 8px solid #2c2f3f;
+}
+#header .profile h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    -moz-text-align-last: center;
+    text-align-last: center;
+    text-align: center
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+}
+#header .profile h1 a, #header .profile h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+
+}
+#header .profile .social-links a {
+    font-size: 18px;
+    display: inline-block;
+    background: #212431;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+#header .profile .social-links a:hover {
+    background: #149ddd;
+    color: #fff;
+    text-decoration: none;
+}
+
+#main {
+    margin-left: 300px;
+}
+
+@media (max-width: 1199px) {
+    #header {
+	left: -300px;
+    }
+
+    #main {
+	margin-left: 0;
+    }
+}
+@media (max-width: 900px) {
+    .profile h1 {
+	text-align: center !important;
+    }
+}
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu {
+    padding: 30px 0 0 0;
+}
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+}
+.nav-menu a, .nav-menu a:focus {
+    display: flex;
+    align-items: center;
+    color: #a8a9b4;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+.nav-menu a i, .nav-menu a:focus i {
+    font-size: 24px;
+    padding-right: 8px;
+    color: #6f7180;
+}
+.nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
+    text-decoration: none;
+    color: #fff;
+}
+.nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
+    color: #149ddd;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #149ddd;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.mobile-nav-active {
+    overflow: hidden;
+}
+.mobile-nav-active #header {
+    left: 0;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("../img/hero-bg-new2.JPG") top center;
+    background-size: cover;
+}
+#hero:before {
+    content: "";
+    background: rgba(5, 13, 24, 0.3);
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+#hero .hero-container {
+    position: relative;
+    z-index: 0;
+    min-width: 100px;
+}
+#hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+}
+#hero p {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}
+#hero p span {
+    color: #fff;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #149ddd;
+}
+@media (min-width: 1024px) {
+    #hero {
+	background-attachment: fixed;
+    }
+}
+@media (max-width: 768px) {
+    #hero h1 {
+	font-size: 28px;
+	line-height: 36px;
+    }
+    #hero h2 {
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.section-bg {
+    background: #f5f8fd;
+}
+
+.section-title {
+    padding-bottom: 30px;
+}
+
+.section-title2 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+}
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+.about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.about .content ul strong {
+    margin-right: 10px;
+}
+.about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+.about .content p:last-child {
+    margin-bottom: 0;
+}
+.resume {
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: auto;
+    width: 100%;
+    top: 50%;
+    padding: 10px;
+}
+.button {
+    font-size: 24px;
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Raleway", sans-serif;
+}
+.button {
+    color: #173b6c;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+
+.button:hover {
+    color: #149ddd;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+.skills-icon{
+    color: rgb(0, 0, 0);
+    margin-right: auto;
+    width:100%;
+    height: auto;
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.skills-title  {
+    font-size: 36px;
+    color: #173b6c;
+    padding: 5px;
+    flex-basis: 100%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+.computer-skills, .programming-skills, .tech-skills{
+    float: left;
+    margin: 1%;
+    font-size: 16px;
+    flex-basis: 100%;
+    margin-bottom: 0.5rem;
+
+}
+.image{
+    height: 150px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+.computer-skills ul i {
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+
+.programming-skills ul i {
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+
+.tech-skills ul i {
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+@media (min-width: 600px) {
+    main {
+	flex-wrap: nowrap;
+    }
+    .computer-skills, .programming-skills, .tech-skills {
+	flex-basis: 31.3%;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.NASA, .trip, .reflection{
+    background-color:#f5f8fd;
+    padding: 5%;
+    overflow-x :hidden;
+
+
+}
+.design{
+    background-color:#fff;
+    margin: 5%;
+    overflow-x :hidden;
+
+
+}
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x :hidden;
+}
+
+.back h1{
+    font-size: 24px;
+}
+
+.section-title p{
+    font-size: 16px;
+}
+.section-title h1{
+    font-size: 28px;
+    font-weight: bolder;
+    color: #173b6c;
+    margin: none;
+}
+.nasatech-rise{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 100%;
+}
+.reason h1{
+    font-size: 20px;
+    font-style: italic;
+}
+
+.project-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    width:fit-content;
+    padding: 20px;
+}
+
+.caption p{
+    font-style: italic;
+    display: block;
+    text-align: center;
+    padding-bottom: 2%;
+}
+.portfolio-details {
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.portfolio-details .portfolio-details-slider .image {
+    width: 100%;
+    height: auto;
+}
+.portfolio-details .portfolio-details-slider .image2 {
+    width: 50vh;
+    height: 70vh;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+    margin-top: 0px;
+    position: relative;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #149ddd;
+}
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #149ddd;
+}
+.portfolio-details .portfolio-info {
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+}
+.portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+.portfolio-details .portfolio-info ul li + li {
+    margin-top: 10px;
+}
+.portfolio-details .portfolio-description {
+    padding-top: 30px;
+    font-style: italic;
+}
+.portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.portfolio-details .portfolio-description p {
+    padding: 0;
+}
+.trip{
+    color: rgb(0, 0, 0);
+    margin-right: auto;
+    width:100%;
+    height: auto;
+    font-size: 18px;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.telemetry  , .telemetry-step  , .telemetry-final  {
+    margin: 1%;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    padding-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    flex-basis: 100%;
+    font-style: italic;
+
+
+}
+.telemetry img, .telemetry-step img, .telemetry-final img{
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+
+@media (min-width: 600px) {
+    main {
+	flex-wrap: nowrap;
+    }
+    .telemetry  , .telemetry-step  , .telemetry-final {
+	flex-basis: 31.3%;
+    }
+}
+.trip h1{
+    text-align: center;
+    padding-top: 50px;
+}
+.harvard-images{
+    margin-right: auto;
+    width:100%;
+    height: auto;
+    font-size: 18px;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+
+}
+.harvard{
+    height: auto;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    main {
+	flex-wrap: nowrap;
+    }
+    .swiper-slide2 {
+	flex-basis: 19.5%;
+    }
+}
+
+.trip .section-title h1{
+    text-align: center;
+}
+
+.portfolio-links{
+    margin: auto;
+    width: 100%;
+    top: 50%;
+    border: none;
+    background-color: none;
+}
+.button2 {
+    border: none;
+    background-color: none;
+}
+
+.button2:hover{
+    background-color:#149ddd;
+    margin: 1%;
+    border-radius: 12px;
+    display: block;
+    padding: 3%;
+}
+
+.main{
+    width: 100%;
+
+}
