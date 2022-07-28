@@ -428,7 +428,7 @@ ul {
 # Portfolio
 --------------------------------------------------------------*/
 
-.button {
+.button2 {
     font-size: 24px;
     border-radius: 12px;
     display: block;
@@ -436,13 +436,13 @@ ul {
     margin-right: auto;
     font-family: "Raleway", sans-serif;
 }
-.button {
+.button2 {
     color: #173b6c;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
 }
 
-.button:hover {
+.button2:hover {
     color: #149ddd;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
