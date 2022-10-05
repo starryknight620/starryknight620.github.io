@@ -137,8 +137,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .img-fluid{
-  width:  200px;
-  height: 200px;
+  width:  400px;
+  height: 328px;
 }
 
 /* Mobile Navigation */
@@ -307,8 +307,8 @@ section {
 }
 
 .img-about{
-  height: 800px;
-  width: 600px;
+  height: 1600px;
+  width: 1311px;
 }
 
 .resume {
