@@ -103,11 +103,6 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 /* Desktop Navigation */
 
-.img-fluid{
-  height: 610px;
-  width: 500px;
-}
-
 .nav-menu {
   padding: 30px 0 0 0;
 }
