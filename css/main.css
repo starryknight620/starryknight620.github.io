@@ -404,13 +404,11 @@ ul {
 --------------------------------------------------------------*/
 
 .button2 {
-    float: right;
     font-size: 24px;
     border-radius: 12px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    color: #173b6c;
     font-family: "Raleway", sans-serif;
   }
 
@@ -418,11 +416,6 @@ ul {
     color: #149ddd;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
-}
-
-.photography-text{
-  float: left;
-  font-family: "Raleway", sans-serif;
 }
 
 /*--------------------------------------------------------------
