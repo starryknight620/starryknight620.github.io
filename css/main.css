@@ -102,6 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
+
+.img-fluid{
+  height: 610px;
+  width: 500px;
+}
+
 .nav-menu {
   padding: 30px 0 0 0;
 }
@@ -134,11 +140,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nav-menu a:hover i, .nav-menu .active i, .nav-menu .active:focus i, .nav-menu li:hover > a i {
   color: #149ddd;
-}
-
-.img-fluid{
-  width:  400px;
-  height: 328px;
 }
 
 /* Mobile Navigation */
@@ -307,8 +308,8 @@ section {
 }
 
 .img-about{
-  height: 1600px;
-  width: 1311px;
+  height: 1219px;
+  width: 1000px;
 }
 
 .resume {
@@ -418,6 +419,15 @@ ul {
     font-family: "Raleway", sans-serif;
 }
 
+.img-camera{
+  height: 760px;
+  width: 1200px;
+}
+
+.photography-text{
+  float: left;
+}
+
 /*--------------------------------------------------------------
 # Noms
 --------------------------------------------------------------*/
@@ -440,6 +450,11 @@ ul {
     color: #149ddd;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
+}
+
+.img-cooking{
+  height: 500px;
+  width: 1000px;
 }
 
 /*--------------------------------------------------------------
