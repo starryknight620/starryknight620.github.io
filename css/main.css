@@ -410,14 +410,6 @@ ul {
     font-family: "Raleway", sans-serif;
 }
 
-.img-fluid{
-    height: 600px;
-    width: 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 ul {
     list-style-type: none;
 }
