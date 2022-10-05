@@ -444,6 +444,7 @@ ul {
 
 .photography-text {
   display: inline-block;
+  vertical-align: top;
   font-family: "Raleway", sans-serif;
 }
 
