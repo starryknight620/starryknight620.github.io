@@ -432,14 +432,6 @@ ul {
     color: #149ddd;
     line-height: 0;
 }
-@media (min-width: 600px) {
-    main {
-  flex-wrap: nowrap;
-    }
-    .photography-text, .button2{
-  flex-basis: 31.3%;
-    }
-}
 
 /*--------------------------------------------------------------
 # Noms
