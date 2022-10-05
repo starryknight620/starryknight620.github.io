@@ -442,6 +442,11 @@ ul {
     font-family: "Raleway", sans-serif;
 }
 
+.photography-text {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Noms
 --------------------------------------------------------------*/
