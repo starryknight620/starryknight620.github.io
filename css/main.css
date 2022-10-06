@@ -400,10 +400,14 @@ ul {
 
 .photography{
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .photography-text{
   font-size: 18px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .button2 {
@@ -431,10 +435,14 @@ ul {
 
 .cooking{
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .cooking-text{
   font-size: 18px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .button3 {
