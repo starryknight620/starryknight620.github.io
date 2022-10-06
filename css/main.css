@@ -327,6 +327,7 @@ section {
   color:#173b6c;
   display: block;
   font-family: "Raleway", sans-serif;
+  padding: none;
 }
 .button:hover {
   color: #149ddd;
@@ -431,6 +432,7 @@ ul {
   color: #173b6c;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
+  padding: none;
 }
 
 .button2:hover {
@@ -466,6 +468,7 @@ ul {
     color: #173b6c;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
+    padding: none;
 }
 
 .button3:hover {
