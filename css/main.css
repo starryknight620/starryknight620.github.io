@@ -309,10 +309,7 @@ section {
 }
 
 .button {
-  border: 2px solid black;
-  background-color: #008CBA; /* Blue */
   border: none;
-  color: white;
   padding: 10px 50px 10px 50px;
   font-size: 24px;
   color:#173b6c;
@@ -413,13 +410,11 @@ ul {
 }
 
 .button2 {
-  border: 2px solid black;
-  background-color: #008CBA; /* Blue */
   border: none;
-  color: white;
   padding: 10px 50px 10px 50px;
   font-size: 24px;
   color:#173b6c;
+  display: block;
   font-family: "Raleway", sans-serif;
   margin-left: auto;
   margin-right: auto;
@@ -448,13 +443,11 @@ ul {
 }
 
 .button3 {
-  border: 2px solid black;
-  background-color: #008CBA; /* Blue */
   border: none;
-  color: white;
   padding: 10px 50px 10px 50px;
   font-size: 24px;
   color:#173b6c;
+  display: block;
   font-family: "Raleway", sans-serif;
   margin-left: auto;
   margin-right: auto;
