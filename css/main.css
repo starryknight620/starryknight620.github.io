@@ -315,7 +315,6 @@ section {
   margin: auto;
   width: 100%;
   top: 50%;
-  padding: 10px;
 }
 .button {
   font-size: 24px;
@@ -398,6 +397,16 @@ ul {
 # Portfolio
 --------------------------------------------------------------*/
 
+.photography-text{
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: auto;
+  width: 100%;
+  top: 50%;
+}
+
 .button2 {
     font-size: 24px;
     margin-left: auto;
@@ -417,13 +426,19 @@ ul {
     font-family: "Raleway", sans-serif;
 }
 
-.photography-text{
-  float: left;
-}
-
 /*--------------------------------------------------------------
 # Noms
 --------------------------------------------------------------*/
+
+.cooking-text{
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: auto;
+  width: 100%;
+  top: 50%;
+}
 
 .button3 {
     font-size: 24px;
