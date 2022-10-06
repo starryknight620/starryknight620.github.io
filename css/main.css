@@ -319,6 +319,7 @@ section {
 .button {
   border: none;
   outline: none;
+  background: none;
   font-size: 24px;
   display: block;
   margin-left: auto;
@@ -335,6 +336,11 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+
+.skills{
+  text-align: center;
+}
+
 
 .skills-icon{
     color: rgb(0, 0, 0);
@@ -399,9 +405,11 @@ ul {
 # Portfolio
 --------------------------------------------------------------*/
 
+.photography{
+  text-align: center;
+}
+
 .photography-text{
-  border: none;
-  outline: none;
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
@@ -411,10 +419,13 @@ ul {
 }
 
 .button2 {
-    font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Raleway", sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Raleway", sans-serif;
   }
 
 .button2 {
@@ -433,9 +444,11 @@ ul {
 # Noms
 --------------------------------------------------------------*/
 
+.cooking{
+  text-align: center;
+}
+
 .cooking-text{
-  border: none;
-  outline: none;
   text-decoration: none;
   display: inline-block;
   font-size: 18px;
@@ -445,10 +458,13 @@ ul {
 }
 
 .button3 {
-    font-size: 18px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Raleway", sans-serif;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Raleway", sans-serif;
 }
 .button3 {
     color: #173b6c;
