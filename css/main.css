@@ -316,8 +316,6 @@ section {
   text-decoration: none;
   display: inline-block;
   font-size: 10px;
-  width: 100%;
-  top: 50%;
 }
 .button {
   border: none;
@@ -424,21 +422,16 @@ ul {
   border: none;
   outline: none;
   background: none;
-  font-size: 18px;
-  font-family: "Raleway", sans-serif;
-  }
-
-.button2 {
-  color: #173b6c;
-  font-weight: 700;
+  font-size: 24px;
+  color:#173b6c;
+  display: block;
   font-family: "Raleway", sans-serif;
   padding: none;
 }
-
 .button2:hover {
-    color: #149ddd;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
+  color: #149ddd;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -461,20 +454,16 @@ ul {
   border: none;
   outline: none;
   background: none;
-  font-size: 18px;
+  font-size: 24px;
+  color:#173b6c;
+  display: block;
   font-family: "Raleway", sans-serif;
+  padding: none;
 }
-.button3 {
-    color: #173b6c;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
-    padding: none;
-}
-
 .button3:hover {
-    color: #149ddd;
-    font-weight: 700;
-    font-family: "Raleway", sans-serif;
+  color: #149ddd;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
 }
 
 /*--------------------------------------------------------------
