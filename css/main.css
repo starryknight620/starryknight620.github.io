@@ -400,13 +400,12 @@ ul {
 
 .button2 {
     font-size: 24px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     font-family: "Raleway", sans-serif;
   }
 
-.button3 {
+.button2 {
   color: #173b6c;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
@@ -428,7 +427,6 @@ ul {
 
 .button3 {
     font-size: 24px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
     font-family: "Raleway", sans-serif;
