@@ -279,11 +279,6 @@ section {
   text-align:center;
 }
 
-.about .content h3 {
-  font-weight: 700;
-  font-size: 26px;
-  color: #173b6c;
-}
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -313,12 +308,6 @@ section {
   margin-right: auto;
 }
 
-.resume {
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 10px;
-}
 .button {
   border: none;
   outline: none;
@@ -414,8 +403,6 @@ ul {
 }
 
 .photography-text{
-  text-decoration: none;
-  text-align:center;
   font-size: 18px;
 }
 
@@ -446,8 +433,6 @@ ul {
 }
 
 .cooking-text{
-  text-decoration: none;
-  text-align: center;
   font-size: 18px;
 }
 
