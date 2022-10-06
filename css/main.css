@@ -309,9 +309,10 @@ section {
 }
 
 .button {
+  background-color: #008CBA; /* Blue */
   border: none;
-  outline: none;
-  background: none;
+  color: white;
+  padding: 15px 32px;
   font-size: 24px;
   color:#173b6c;
   display: block;
@@ -411,9 +412,10 @@ ul {
 }
 
 .button2 {
+  background-color: #008CBA; /* Blue */
   border: none;
-  outline: none;
-  background: none;
+  color: white;
+  padding: 15px 32px;
   font-size: 24px;
   color:#173b6c;
   display: block;
@@ -446,9 +448,10 @@ ul {
 }
 
 .button3 {
+  background-color: #008CBA; /* Blue */
   border: none;
-  outline: none;
-  background: none;
+  color: white;
+  padding: 15px 32px;
   font-size: 24px;
   color:#173b6c;
   display: block;
