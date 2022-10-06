@@ -316,7 +316,6 @@ section {
   text-decoration: none;
   display: inline-block;
   font-size: 10px;
-  margin: auto;
   width: 100%;
   top: 50%;
 }
@@ -327,12 +326,10 @@ section {
   font-size: 24px;
   color:#173b6c;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   font-family: "Raleway", sans-serif;
 }
 .button:hover {
-  color: #173b6c;
+  color: #149ddd;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }
@@ -356,8 +353,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
+
 .skills-title  {
     font-size: 36px;
     color: #173b6c;
@@ -418,7 +415,6 @@ ul {
   text-decoration: none;
   text-align:center;
   font-size: 18px;
-  margin: auto;
   width: 100%;
   top: 50%;
 }
@@ -455,7 +451,6 @@ ul {
   text-decoration: none;
   text-align: center;
   font-size: 18px;
-  margin: auto;
   width: 100%;
   top: 50%;
 }
