@@ -423,8 +423,6 @@ ul {
   outline: none;
   background: none;
   font-size: 18px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: "Raleway", sans-serif;
   }
 
@@ -462,8 +460,6 @@ ul {
   outline: none;
   background: none;
   font-size: 18px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: "Raleway", sans-serif;
 }
 .button3 {
@@ -476,10 +472,6 @@ ul {
     color: #149ddd;
     font-weight: 700;
     font-family: "Raleway", sans-serif;
-}
-
-.cooking-text{
-  float: left;
 }
 
 /*--------------------------------------------------------------
