@@ -416,7 +416,6 @@ ul {
 
 .photography-text{
   text-decoration: none;
-  display: inline-block;
   text-align:center;
   font-size: 18px;
   margin: auto;
@@ -454,7 +453,6 @@ ul {
 
 .cooking-text{
   text-decoration: none;
-  display: inline-block;
   text-align: center;
   font-size: 18px;
   margin: auto;
