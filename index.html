@@ -15,13 +15,16 @@
       service: 'starryknight-personal-site',
       env: 'prod',
       // Specify a version number to identify the deployed version of your application in Datadog
-      // version: '1.0.0', 
+      version: '1.0.1', 
       sessionSampleRate: 100,
       sessionReplaySampleRate: 100,
       trackUserInteractions: true,
       trackResources: true,
       trackLongTasks: true,
       defaultPrivacyLevel: 'mask-user-input',
+      trackSessionAcrossSubdomains: true, //enabling session tracking on sub domains 
+      enableExperimentalFeatures: ["feature_flags"],
+
     });
 </script>
 	
