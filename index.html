@@ -24,6 +24,13 @@
       defaultPrivacyLevel: 'mask-user-input',
       trackSessionAcrossSubdomains: true, //enabling session tracking on sub domains 
       enableExperimentalFeatures: ["feature_flags"],
+      beforeSend: (event, context) => {
+        // collect a RUM resource's response headers
+        if (event.type === 'resource' && event.resource.type === 'fetch') {
+            event.context.responseHeaders = Object.fromEntries(context.response.headers)
+        }
+        return true
+    	},
 
     });
 </script>
