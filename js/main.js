@@ -87,6 +87,16 @@
     onscroll(document, toggleBacktotop)
   }
 
+window.addEventListener('scroll', function() {
+  const backToTopButton = document.querySelector('.back-to-top');
+  if (window.scrollY > 200) {
+    backToTopButton.classList.add('active');
+  } else {
+    backToTopButton.classList.remove('active');
+  }
+});
+
+  
   /**
    * Mobile nav toggle
    */
