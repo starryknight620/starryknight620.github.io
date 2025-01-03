@@ -474,6 +474,13 @@ ul {
   line-height: 1.6;
 }
 
+.noms-text {
+  text-align: center;
+  margin: 0 auto;  /* Ensures it's centered horizontally */
+  padding: 20px 0; /* Adds spacing around the section */
+  max-width: 1200px; /* Optional: Limits the width of the section */
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
