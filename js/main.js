@@ -46,10 +46,13 @@
  let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY
+    console.log("Scroll position:", position); // Check scroll position
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return
       let section = select(navbarlink.hash)
       if (!section) return
+      console.log("Section:", section); // Log the section element
+      console.log("Section offsetTop:", section.offsetTop); // Check offsetTop
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {
