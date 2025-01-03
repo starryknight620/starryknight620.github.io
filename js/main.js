@@ -74,6 +74,37 @@
     el.addEventListener('scroll', listener);
   }
 
+(function() {
+  "use strict";
+
+  const select = (el, all = false) => {
+    el = el.trim();
+    if (all) {
+      return [...document.querySelectorAll(el)];
+    } else {
+      return document.querySelector(el);
+    }
+  }
+
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all);
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener));
+      } else {
+        selectEl.addEventListener(type, listener);
+      }
+    }
+  }
+
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener);
+  }
+
+/**
+Navbar scrolling functions
+*/
+  
   let navbarlinks = select('#navbar .scrollto', true);
 
   const navbarlinksActive = () => {
@@ -89,6 +120,7 @@
       let sectionHeight = section.offsetHeight;
       let sectionBottom = sectionTop + sectionHeight;
 
+      // Debugging logs for each section
       console.log("Section:", section);
       console.log("Section offsetTop:", sectionTop);
       console.log("Section offsetHeight:", sectionHeight);
@@ -96,8 +128,8 @@
       console.log("Header Height:", headerHeight);
       console.log("Scroll Position:", position);
 
-      // Adjusted condition with the header offset and a slight threshold margin
-      if (position >= sectionTop - headerHeight - 100 && position <= sectionBottom - headerHeight) {
+      // Adjusted condition with a smaller threshold margin for better visibility
+      if (position >= sectionTop - headerHeight - 100 && position < sectionBottom - headerHeight) {
         navbarlink.classList.add('active');
       } else {
         navbarlink.classList.remove('active');
@@ -124,6 +156,7 @@
   }, true);
 
 })();
+
 
   
   /**
