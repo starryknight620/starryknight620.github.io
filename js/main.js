@@ -47,75 +47,84 @@
 /**
  * Navbar links active state on scroll
  */
-const headerHeight = select('#header').offsetHeight; // Adjust this part to calculate the height of your fixed header  
-let navbarlinks = select('#navbar .scrollto', true);
+(function() {
+  "use strict";
 
-const navbarlinksActive = () => {
-  let position = window.scrollY;
-
-  // Log scroll position and navbar links
-  console.log("Scroll position:", position);
-  console.log("Navbar links:", navbarlinks);
-
-  navbarlinks.forEach(navbarlink => {
-    if (!navbarlink.hash) return;
-    let section = select(navbarlink.hash);
-    if (!section) return;
-
-    let sectionTop = section.offsetTop;
-    let sectionHeight = section.offsetHeight;
-    let sectionBottom = sectionTop + sectionHeight;
-
-    // Ensure header height is correctly retrieved; fallback to 0 if not found
-    const header = select('.header');
-    const headerHeight = header ? header.offsetHeight : 0;
-
-    // Log section details for debugging
-    console.log("Section:", section);
-    console.log("Section offsetTop:", sectionTop);
-    console.log("Section offsetHeight:", sectionHeight);
-    console.log("Section Bottom:", sectionBottom);
-    console.log("Header Height:", headerHeight);
-
-    // Adjusted condition with the header offset and a slight threshold margin
-    if (position >= sectionTop - headerHeight - 100 && position <= sectionBottom - headerHeight) {
-      navbarlink.classList.add('active');
+  const select = (el, all = false) => {
+    el = el.trim();
+    if (all) {
+      return [...document.querySelectorAll(el)];
     } else {
-      navbarlink.classList.remove('active');
+      return document.querySelector(el);
     }
-  });
-};
+  }
 
-// Adding event listeners
-window.addEventListener('load', navbarlinksActive);
-onscroll(document, navbarlinksActive);
-
-/**
- * Scrolls to an element with header offset
- */
-const scrollto = (el) => {
-  let elementPos = select(el).offsetTop;
-  window.scrollTo({
-    top: elementPos,
-    behavior: 'smooth'
-  });
-};
-
-  /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all);
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener));
       } else {
-        backtotop.classList.remove('active')
+        selectEl.addEventListener(type, listener);
       }
     }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
   }
+
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener);
+  }
+
+  let navbarlinks = select('#navbar .scrollto', true);
+
+  const navbarlinksActive = () => {
+    let position = window.scrollY;
+    let headerHeight = select('#header') ? select('#header').offsetHeight : 0;
+
+    navbarlinks.forEach(navbarlink => {
+      if (!navbarlink.hash) return;
+      let section = select(navbarlink.hash);
+      if (!section) return;
+
+      let sectionTop = section.offsetTop;
+      let sectionHeight = section.offsetHeight;
+      let sectionBottom = sectionTop + sectionHeight;
+
+      console.log("Section:", section);
+      console.log("Section offsetTop:", sectionTop);
+      console.log("Section offsetHeight:", sectionHeight);
+      console.log("Section Bottom:", sectionBottom);
+      console.log("Header Height:", headerHeight);
+      console.log("Scroll Position:", position);
+
+      // Adjusted condition with the header offset and a slight threshold margin
+      if (position >= sectionTop - headerHeight - 100 && position <= sectionBottom - headerHeight) {
+        navbarlink.classList.add('active');
+      } else {
+        navbarlink.classList.remove('active');
+      }
+    });
+  };
+
+  window.addEventListener('load', navbarlinksActive);
+  onscroll(document, navbarlinksActive);
+
+  const scrollto = (el) => {
+    let elementPos = select(el).offsetTop;
+    window.scrollTo({
+      top: elementPos,
+      behavior: 'smooth'
+    });
+  }
+
+  on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
+      e.preventDefault();
+      scrollto(this.hash);
+    }
+  }, true);
+
+})();
+
   
   /**
    * Mobile nav toggle
