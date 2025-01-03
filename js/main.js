@@ -47,6 +47,7 @@
 /**
  * Navbar links active state on scroll
  */
+const headerHeight = select('#header').offsetHeight; // Adjust this part to calculate the height of your fixed header  
 let navbarlinks = select('#navbar .scrollto', true);
 
 const navbarlinksActive = () => {
