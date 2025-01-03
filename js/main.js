@@ -43,32 +43,18 @@
   /**
    * Navbar links active state on scroll
    */
- let navbarlinks = select('#navbar .scrollto', true)
-  /** const navbarlinksActive = () => {
-    let position = window.scrollY
-    console.log("Scroll position:", position); // Check scroll position
-    navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      console.log("Section:", section); // Log the section element
-      console.log("Section offsetTop:", section.offsetTop); // Check offsetTop
-      if (position >= section.offsetTop - 100 && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
-      } else {
-        navbarlink.classList.remove('active')
-      }
-    })
-  }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive) */
 
-  const navbarlinksActive = () => {
+/**
+ * Navbar links active state on scroll
+ */
+let navbarlinks = select('#navbar .scrollto', true);
+
+const navbarlinksActive = () => {
   let position = window.scrollY;
 
   // Log scroll position and navbar links
   console.log("Scroll position:", position);
-  console.log("Navbar links:", navbarlinks); // Log navbar links to check if they're correctly selected
+  console.log("Navbar links:", navbarlinks);
 
   navbarlinks.forEach(navbarlink => {
     if (!navbarlink.hash) return;
@@ -79,8 +65,9 @@
     let sectionHeight = section.offsetHeight;
     let sectionBottom = sectionTop + sectionHeight;
 
-    // Check if the section has a fixed header and adjust scroll position accordingly
-    const headerHeight = select('.header') ? select('.header').offsetHeight : 0;
+    // Ensure header height is correctly retrieved; fallback to 0 if not found
+    const header = select('.header');
+    const headerHeight = header ? header.offsetHeight : 0;
 
     // Log section details for debugging
     console.log("Section:", section);
@@ -102,17 +89,16 @@
 window.addEventListener('load', navbarlinksActive);
 onscroll(document, navbarlinksActive);
 
-  
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos,
-      behavior: 'smooth'
-    })
-  }
+/**
+ * Scrolls to an element with header offset
+ */
+const scrollto = (el) => {
+  let elementPos = select(el).offsetTop;
+  window.scrollTo({
+    top: elementPos,
+    behavior: 'smooth'
+  });
+};
 
   /**
    * Back to top button
