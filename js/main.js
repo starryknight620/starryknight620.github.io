@@ -43,7 +43,7 @@
   /**
    * Navbar links active state on scroll
    */
- /** let navbarlinks = select('#navbar .scrollto', true)
+ let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY
     navbarlinks.forEach(navbarlink => {
@@ -58,29 +58,7 @@
     })
   }
   window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive) */
-
-const navbarlinksActive = () => {
-  let position = window.scrollY;
-  navbarlinks.forEach(navbarlink => {
-    if (!navbarlink.hash) return;
-    let section = select(navbarlink.hash);
-    if (!section) return;
-
-    // Check if section is visible in the viewport
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.offsetHeight;
-    const viewportHeight = window.innerHeight;
-
-    // If the section is within the visible viewport, add active class
-    if (position + viewportHeight > sectionTop && position < sectionBottom) {
-      navbarlink.classList.add('active');
-    } else {
-      navbarlink.classList.remove('active');
-    }
-  });
-}
-
+  onscroll(document, navbarlinksActive) 
   
   /**
    * Scrolls to an element with header offset
