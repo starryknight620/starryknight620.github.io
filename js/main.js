@@ -44,7 +44,7 @@
    * Navbar links active state on scroll
    */
  let navbarlinks = select('#navbar .scrollto', true)
-  const navbarlinksActive = () => {
+  /** const navbarlinksActive = () => {
     let position = window.scrollY
     console.log("Scroll position:", position); // Check scroll position
     navbarlinks.forEach(navbarlink => {
@@ -61,7 +61,47 @@
     })
   }
   window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive) 
+  onscroll(document, navbarlinksActive) */
+
+  const navbarlinksActive = () => {
+  let position = window.scrollY;
+
+  // Log scroll position and navbar links
+  console.log("Scroll position:", position);
+  console.log("Navbar links:", navbarlinks); // Log navbar links to check if they're correctly selected
+
+  navbarlinks.forEach(navbarlink => {
+    if (!navbarlink.hash) return;
+    let section = select(navbarlink.hash);
+    if (!section) return;
+
+    let sectionTop = section.offsetTop;
+    let sectionHeight = section.offsetHeight;
+    let sectionBottom = sectionTop + sectionHeight;
+
+    // Check if the section has a fixed header and adjust scroll position accordingly
+    const headerHeight = select('.header') ? select('.header').offsetHeight : 0;
+
+    // Log section details for debugging
+    console.log("Section:", section);
+    console.log("Section offsetTop:", sectionTop);
+    console.log("Section offsetHeight:", sectionHeight);
+    console.log("Section Bottom:", sectionBottom);
+    console.log("Header Height:", headerHeight);
+
+    // Adjusted condition with the header offset and a slight threshold margin
+    if (position >= sectionTop - headerHeight - 100 && position <= sectionBottom - headerHeight) {
+      navbarlink.classList.add('active');
+    } else {
+      navbarlink.classList.remove('active');
+    }
+  });
+};
+
+// Adding event listeners
+window.addEventListener('load', navbarlinksActive);
+onscroll(document, navbarlinksActive);
+
   
   /**
    * Scrolls to an element with header offset
