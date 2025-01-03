@@ -408,6 +408,10 @@ ul {
   margin-left: auto;
 }
 
+.noms .noms-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #149ddd;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
