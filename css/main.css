@@ -37,10 +37,16 @@ h1, h2, h3, h4, h5, h6 {
   overflow-y: auto;
 }
 #header .profile img {
-  margin: 15px auto;
-  display: block;
   width: 120px;
   border: 8px solid #2c2f3f;
+  margin: 15px auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #header .profile img {
+    width: 100px; /* Adjust to smaller size for mobile screens */
+  }
 }
 #header .profile h1 {
   font-size: 24px;
@@ -87,17 +93,18 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1199px) {
   #header {
     left: -300px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #header.mobile-nav-active {
+    left: 0;
   }
 
   #main {
     margin-left: 0;
   }
 }
-@media (max-width: 900px) {
-    .profile h1 {
-        text-align: center !important;
-    }
-}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -129,6 +136,20 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 8px;
   color: #6f7180;
 }
+
+.nav-menu a.active {
+  color: #149ddd; /* Active link color */
+}
+
+.nav-menu a:hover, .nav-menu li:hover > a {
+  color: #fff;
+}
+
+.nav-menu a.active i {
+  color: #149ddd;
+}
+
+
 .nav-menu a:hover, .nav-menu .active, .nav-menu .active:focus, .nav-menu li:hover > a {
   text-decoration: none;
   color: #fff;
@@ -174,6 +195,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 100vh;
   background: url("/img/hero-bg-new2.JPG") top center;
   background-size: cover;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background-position: center;
+    height: 60vh; /* Reduce height on small screens for better layout */
+  }
 }
 #hero:before {
   content: "";
@@ -273,6 +302,27 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Resume Cleaner look 
+--------------------------------------------------------------*/
+
+.resume a {
+  color: #149ddd;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #040b14;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.resume a:hover {
+  background-color: #149ddd;
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 .about {
@@ -317,6 +367,31 @@ section {
   text-align: center;
 }
 
+.skills-title {
+  font-size: 36px;
+  color: #173b6c;
+  padding: 5px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.computer-skills, .tech-skills {
+  padding: 10px;
+  margin: 1%;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills ul li {
+  margin: 10px 0;
+}
 .skills-icon{
     color: rgb(0, 0, 0);
     margin-right: auto;
@@ -326,24 +401,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.skills-title  {
-    font-size: 36px;
-    color: #173b6c;
-    padding: 5px;
-    flex-basis: 100%;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    font-weight: 700;
-}
-.computer-skills, .tech-skills{
-    float: left;
-    margin: 1%;
-    font-size: 16px;
-    flex-basis: 100%;
-    margin-bottom: 0.5rem;
-
 }
 .image{
     height: 150px;
