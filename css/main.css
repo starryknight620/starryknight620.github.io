@@ -31,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   transition: all ease-in-out 0.5s;
   z-index: 9997;
-  transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
   overflow-y: auto;
@@ -55,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  text-align: center
+  text-align: center;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -357,9 +356,9 @@ section {
   margin-bottom: 0;
 }
 
-.img-about{
-  height: 1219px;
-  width: 1000px;
+.img-about {
+  width: 100%;  /* Make it responsive */
+  height: auto; /* Adjust height proportionally */
   margin-left: auto;
   margin-right: auto;
 }
