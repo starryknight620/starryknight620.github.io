@@ -137,16 +137,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #6f7180;
 }
 
+
 .nav-menu a.active {
-  color: #149ddd; /* Active link color */
+  color: #149ddd !important;  /* Blue color for active link */
+  font-weight: bold;  /* Optional: Make the active link bolder */
 }
 
 .nav-menu a:hover, .nav-menu li:hover > a {
   color: #fff;
 }
 
-.nav-menu a.active i {
-  color: #149ddd;
+.nav-menu a i.active {
+  color: #149ddd;  /* Color for the icon in the active link */
+}
+
+.nav-menu a:focus {
+  outline: none;
 }
 
 
@@ -453,16 +459,19 @@ ul {
 # Noms
 --------------------------------------------------------------*/
 
-.cooking{
+.cooking {
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;  /* Ensures it's centered horizontally */
+  padding: 20px 0; /* Adds spacing around the section */
+  max-width: 1200px; /* Optional: Limits the width of the section */
 }
 
-.cooking-text{
+.cooking-text {
   font-size: 18px;
   margin-right: auto;
   margin-left: auto;
+  max-width: 800px; /* Optional: limits text width */
+  line-height: 1.6;
 }
 
 /*--------------------------------------------------------------
