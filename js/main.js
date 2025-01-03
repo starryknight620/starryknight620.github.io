@@ -53,7 +53,7 @@
       if (!section) return
       console.log("Section:", section); // Log the section element
       console.log("Section offsetTop:", section.offsetTop); // Check offsetTop
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      if (position >= section.offsetTop - 100 && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {
         navbarlink.classList.remove('active')
