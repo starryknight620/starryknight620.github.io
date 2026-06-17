@@ -51,12 +51,17 @@ let navbarlinks = select('#navbar .scrollto', true);
 
 const navbarlinksActive = () => {
   let position = window.scrollY;
+  const header = select('.header');
+  const headerHeight = header ? header.offsetHeight : 0;
 
-  // Log scroll position and navbar links
-  console.log("Scroll position:", position);
-  console.log("Navbar links:", navbarlinks);
+  // Check if we're at (or near) the bottom of the page — activate last link
+  const atBottom = (window.innerHeight + window.scrollY) >= document.body.scrollHeight - 5;
 
-  navbarlinks.forEach(navbarlink => {
+  let activeSet = false;
+
+  // Iterate in reverse so the first matching section from the top wins
+  const links = Array.from(navbarlinks).reverse();
+  links.forEach(navbarlink => {
     if (!navbarlink.hash) return;
     let section = select(navbarlink.hash);
     if (!section) return;
@@ -65,20 +70,17 @@ const navbarlinksActive = () => {
     let sectionHeight = section.offsetHeight;
     let sectionBottom = sectionTop + sectionHeight;
 
-    // Ensure header height is correctly retrieved; fallback to 0 if not found
-    const header = select('.header');
-    const headerHeight = header ? header.offsetHeight : 0;
+    const isLastLink = navbarlink === navbarlinks[navbarlinks.length - 1];
 
-    // Log section details for debugging
-    console.log("Section:", section);
-    console.log("Section offsetTop:", sectionTop);
-    console.log("Section offsetHeight:", sectionHeight);
-    console.log("Section Bottom:", sectionBottom);
-    console.log("Header Height:", headerHeight);
-
-    // Adjusted condition with the header offset and a slight threshold margin
-    if (position >= sectionTop - headerHeight - 100 && position <= sectionBottom - headerHeight) {
+    if (
+      !activeSet &&
+      (
+        (isLastLink && atBottom) ||
+        (position >= sectionTop - headerHeight - 100 && position < sectionBottom - headerHeight)
+      )
+    ) {
       navbarlink.classList.add('active');
+      activeSet = true;
     } else {
       navbarlink.classList.remove('active');
     }
