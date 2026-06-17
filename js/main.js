@@ -75,7 +75,7 @@ const navbarlinksActive = () => {
     if (
       !activeSet &&
       (
-        (isLastLink && atBottom) ||
+        (isLastLink && position >= sectionTop - headerHeight - 100) ||
         (position >= sectionTop - headerHeight - 100 && position < sectionBottom - headerHeight)
       )
     ) {
