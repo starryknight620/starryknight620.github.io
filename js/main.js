@@ -71,11 +71,13 @@ const navbarlinksActive = () => {
     let sectionBottom = sectionTop + sectionHeight;
 
     const isLastLink = navbarlink === navbarlinks[navbarlinks.length - 1];
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const effectiveSectionTop = isLastLink ? Math.min(sectionTop, maxScroll) : sectionTop;
 
     if (
       !activeSet &&
       (
-        (isLastLink && position >= sectionTop - headerHeight - 100) ||
+        (isLastLink && position >= effectiveSectionTop - headerHeight - 100) ||
         (position >= sectionTop - headerHeight - 100 && position < sectionBottom - headerHeight)
       )
     ) {
