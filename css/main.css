@@ -163,13 +163,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #149ddd;
 }
 
-.nav-link.active {
-  color: #ff6347; /* Highlight color */
-  font-weight: bold;
-}
-
+.nav-link.active,
 #navbar .scrollto.active {
-  color: #ff9f00; /* Or any color that stands out */
+  color: #149ddd;
   font-weight: bold;
 }
 
