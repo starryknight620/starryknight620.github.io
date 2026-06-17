@@ -487,6 +487,10 @@ ul {
   max-width: 1200px; /* Optional: Limits the width of the section */
 }
 
+#noms {
+  min-height: 500px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
